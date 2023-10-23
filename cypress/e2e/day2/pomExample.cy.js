@@ -20,7 +20,7 @@ describe("Login test",()=>{
 
     });
 
-    it("TC002 positive scenario",()=>{
+    it("TC003 positive scenario using return this chain method",()=>{
         login.navigate();
         login.loginLink()
         .username()

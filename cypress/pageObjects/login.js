@@ -1,37 +1,38 @@
 export class Login {
-     navigate(){
-       // cy.visit('https://www.demoblaze.com/')
-        cy.visit(Cypress.env("baseUrl"))
+   navigate() {
+      // cy.visit('https://www.demoblaze.com/')
+      cy.visit(Cypress.env("baseUrl"))
 
-     }
+   }
 
-     assertTitle(){
-        cy.title().should("eq","STORE")
-     }
+   assertTitle() {
+      cy.title().should("eq", "STORE")
+   }
 
-     loginLink(){
-        cy.get('#login2').click().wait(500)
-        return this
-     }
+   loginLink() {
+      cy.get('#login2').click().wait(500)
+      return this
+   }
 
-     username(){
-        cy.get('#loginusername').type('mgezer@gmail.com').wait(500)  //env.dan da alınabilir
-        return this
-     }
+   username() {
+      cy.get('#loginusername').type('mgezer@gmail.com').wait(500)  //env.dan da alınabilir
+      return this
+   }
 
-     password(){
-        cy.get('#loginpassword').type('Mg12345678').wait(500)  //env.dan da alınabilir
-        return this
-     }
+   password() {
+      cy.get('#loginpassword').type('Mg12345678').wait(500)  //env.dan da alınabilir
+      return this
+   }
 
-     loginButton(){
-        cy.get('[onclick="logIn()"]').click().wait(500)
-        return this
-     }
+   loginButton() {
+      cy.get('[onclick="logIn()"]').click().wait(500)
+      return this
+   }
 
-     assertUsername(){
-        cy.get('#nameofuser').should("have.text","Welcome mgezer@gmail.com")
-     }
+   assertUsername() {
+      cy.get('#nameofuser').should("have.text", "Welcome mgezer@gmail.com")
+      // cy.get('#nameofuser').should("have.text", bla bla") // negative scenario for ss
+   }
 
 }
 
