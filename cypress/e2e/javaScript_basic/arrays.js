@@ -7,6 +7,8 @@ There are two important Brackets in JS
 {} ----> creates an object
 */
 
+const { log } = require("handlebars");
+
 // creating array
 
 var scores = new Array(); //empty
@@ -74,3 +76,43 @@ console.log(tools);
 const reverse=tools.reverse(); //reverses elements of array 
 console.log(reverse);
 console.log(tools);
+
+
+tools.forEach(e=>{
+    console.log(e.length)
+})
+
+let map=new Map();
+
+map.set("Ayşe","SDET");
+map.set("Bilal","Java");
+map.set("Hasan","PO");
+
+console.log(map.keys());
+
+console.log(map.values());
+
+console.log(map.get("Ayşe"));
+console.log(map.has("Bilal"));   //keyleri kontrol eder
+console.log(map.has("Java"));  //valueleri kontrol etmez
+
+console.log(map);
+
+let keys=map.keys();
+
+console.log(keys);
+
+for(let[k,v] of map){
+    console.log(k+" : "+v);
+}
+
+map.set("Ayşe","Designer")
+
+for(let[k,v] of map){
+    console.log(k+" : "+v);
+}
+
+map.forEach((v,k)=>{
+    console.log(k+" : "+v); 
+})
+
